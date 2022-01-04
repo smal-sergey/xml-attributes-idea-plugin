@@ -1,0 +1,30 @@
+plugins {
+    id 'org.jetbrains.intellij' version '1.2.0'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.10'
+}
+
+group 'com.smalser'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.5.31'
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    version = '2021.2.2'
+
+    instrumentCode = false
+    runIde {
+        jvmArgs '--add-exports', 'java.base/jdk.internal.vm=ALL-UNNAMED'
+    }
+}
+patchPluginXml {
+    changeNotes = """
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>"""
+}

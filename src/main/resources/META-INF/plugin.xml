@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.smalser.tf-axiom-idea-plugin</id>
+    <name>action set navigator</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Plugin to navigate to ActionSets in xml with actions
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+<!--        <psi.referenceContributor implementation="com.smalser.plugin.psi.ActionSetReferenceContributor" language="XML"-->
+<!--                                  id="my" order="first">-->
+<!--        </psi.referenceContributor>-->
+
+<!--        <dom.converter implementationClass="com.smalser.plugin.psi.ActionSetConverter"-->
+<!--                       interfaceClass="com.smalser.plugin.psi.ActionSetConverter"/>-->
+        <postStartupActivity implementation="com.smalser.plugin.PostStartupActivity"/>
+
+        <dom.fileMetaData implementation="com.smalser.plugin.dom.ActionsDomFileDescription" rootTagName="actions"/>
+<!--        <dom.extender domClass="com.smalser.plugin.dom.model.Action" extenderClass="com.smalser.plugin.dom.extend.MyDomExtender"/>-->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>

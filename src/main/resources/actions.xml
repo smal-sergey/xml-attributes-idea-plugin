@@ -1,0 +1,12 @@
+<actions>
+
+    <actionset name="Test_Old_ActionSet">
+        <action class="TempAction"/>
+        <action class="TempAction2"/>
+    </actionset>
+
+    <actionset name="Test_New_ActionSet">
+        <action class="TempAction"/>
+        <action class="RunActionSetAction" actionset="Test_Old_ActionSet"/>
+    </actionset>
+</actions>

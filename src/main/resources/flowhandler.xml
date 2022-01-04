@@ -1,0 +1,5 @@
+<flow>
+    <bean id="ABC"
+          beginActionSet="Test_Old_ActionSet"
+    />
+</flow>
